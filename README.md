@@ -1,6 +1,6 @@
 Progetto di prova in java per un applicazione che simuli il comportamento (dummy) di un home banking.
 Teconologie, linguaggi e tools utilizzati: 
-- SQL
+- MySQL
 - JAVA
 - Servizi REST
 - JPA + Hibernate

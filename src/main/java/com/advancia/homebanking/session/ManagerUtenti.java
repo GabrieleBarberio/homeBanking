@@ -3,7 +3,7 @@ package com.advancia.homebanking.session;
 import javax.ejb.Stateless;
 
 import com.advancia.homebanking.dao.UtenteDAO;
-import com.edvancia.homebanking.editdto.UtenteEDTO;
+import com.advancia.homebanking.editdto.UtenteEDTO;
 
 /**
  * Session Bean implementation class ManagerUtenti

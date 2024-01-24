@@ -7,8 +7,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.advancia.homebanking.editdto.UtenteEDTO;
 import com.advancia.homebanking.session.ManagerUtentiLocal;
-import com.edvancia.homebanking.editdto.UtenteEDTO;
 
 @Path("/utente")
 public class UtenteServiceImpl implements UtenteService {

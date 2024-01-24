@@ -3,11 +3,11 @@ package com.advancia.homebanking.dao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import com.advancia.homebanking.editdto.ContoEDTO;
+import com.advancia.homebanking.editdto.UtenteEDTO;
 import com.advancia.homebanking.entity.Conto;
 import com.advancia.homebanking.entity.Utente;
 import com.advancia.homebanking.util.JPAUtil;
-import com.edvancia.homebanking.editdto.ContoEDTO;
-import com.edvancia.homebanking.editdto.UtenteEDTO;
 
 public class UtenteDAO {
 	

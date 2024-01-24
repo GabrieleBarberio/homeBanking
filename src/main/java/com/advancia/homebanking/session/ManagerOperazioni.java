@@ -1,6 +1,11 @@
 package com.advancia.homebanking.session;
 
+import java.sql.SQLException;
+
 import javax.ejb.Stateless;
+
+import com.advancia.homebanking.dao.OperazioniDAO;
+import com.advancia.homebanking.editdto.OperazioneEDTO;
 
 /**
  * Session Bean implementation class ManagerOperazioni
@@ -8,23 +13,22 @@ import javax.ejb.Stateless;
 @Stateless
 public class ManagerOperazioni implements ManagerOperazioniLocal {
 
-    /**
-     * Default constructor. 
-     */
-    public ManagerOperazioni() {
-        // TODO Auto-generated constructor stub
-    }
+	private OperazioniDAO dao = new OperazioniDAO();
 
-	@Override
-	public String ricaricaConto(String idConto, int ammonto) {
-		// TODO Auto-generated method stub
-		return null;
+	public ManagerOperazioni() {
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public String bonifico(String idContoEmittente, String idContoRicevente, int ammonto) {
-		// TODO Auto-generated method stub
-		return null;
+	public String ricaricaConto(int idConto, int ammonto) throws SQLException {
+		OperazioneEDTO op = new OperazioneEDTO(idConto, ammonto);
+		return dao.ricarica(op);
+	}
+
+	@Override
+	public String bonifico(int idContoEmittente, int idContoRicevente, int ammonto) throws SQLException {
+		OperazioneEDTO op = new OperazioneEDTO(idContoEmittente, idContoEmittente, ammonto);
+		return dao.bonifico(op);
 	}
 
 }

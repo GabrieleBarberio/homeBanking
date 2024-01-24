@@ -1,11 +1,13 @@
 package com.advancia.homebanking.session;
 
+import java.sql.SQLException;
+
 import javax.ejb.Local;
 
 @Local
 public interface ManagerOperazioniLocal {
 
-	public String ricaricaConto(String idConto, int ammonto);
+	public String ricaricaConto(int idConto, int ammonto) throws SQLException;
 	
-	public String bonifico(String idContoEmittente, String idContoRicevente, int ammonto);
+	public String bonifico(int idContoEmittente, int idContoRicevente, int ammonto) throws SQLException;
 }
